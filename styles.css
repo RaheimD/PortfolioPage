@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    padding-top: 5rem;  /* Reduced padding to avoid large top space */
+}
+
+header {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+/* Mobile Navigation */
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+section {
+    min-height: auto; /* Adjust to avoid excessive height */
+    padding: 1rem 9% 1rem; /* Reduced padding to reduce spacing */
+    background-color: black;
+    margin-top: 2rem;  /* Added some space between header and sections */
+}
+
+/* General Content Layout */
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;  /* Reduced padding for tighter spacing */
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;  /* Reduced space between sections */
+    text-align: center;
+}
+
+/* Reduced space between Reflection and Application headings */
+.reflection h2,
+.application h2 {
+    margin-bottom: 1rem;
+}
+
+/* Section Paragraphs */
+section p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 1rem;  /* Reduced margin for closer spacing */
+}
+
+/* Personal Development Section */
+.personal-development {
+    text-align: left;
+    padding: 15px;  /* Reduced padding to minimize space */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.personal-development h2 {
+    font-size: 2.5rem;  /* Adjusted heading size */
+    margin-bottom: 0.5rem;
+}
+
+.personal-development p {
+    font-size: 1.7rem;  /* Adjusted text size */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Personality Test Section */
+.test-screenshot {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Resume Section */
+.resume-section {
+    margin-top: 30px;
+}
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 2rem;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.resume-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Career Vision & Mission */
+.vision-mission {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    width: 100%;
+    max-width: 550px;
+    margin: 50px auto;
+}
+
+.vision-mission h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.vision-mission p {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+/* General Image Styling for Personality Page */
+.scaled-img {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Reduce the padding for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding-top: 6rem;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .resume-container {
+        padding: 10px;
+    }
+
+    .resume-img {
+        max-width: 100%;
+    }
+
+    .vision-mission {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    /* Adjust padding for personal development page */
+    .personal-development {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .personal-development h2 {
+        font-size: 2rem;
+    }
+
+    .personal-development p {
+        font-size: 1.5rem;
+    }
+}
